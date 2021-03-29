@@ -9,11 +9,41 @@
 
 // From: https://www.codewars.com/kata/52efefcbcdf57161d4000091
 
+//P: If it is an empty string, then it should return an empty obj literal. Will it ever have special chars? Does capitalization matter? Do spaces matter?
+//R: Should return an object in which  there are whatever letters are in the string and a num attached with how much they return. 
+//E: See console logs.
+//P: Make a function that takes in a str
+    function occurringChars(str){
+//   Split string into an array and subsequent object. 
+       let newStr = {str.split('')}
+//   Loop thru chars
+        for(i=0; i<newStr; i++){
+            //   Use bracket notation to add 1 to value for that letter in obj
 
+            //   Or add that letter as a property with val of 1
+        }
+    }
 
+//Teacher soln
 
-
-
+function occurringChars(str){
+//create obj
+    let countObj = {}
+    //loop thru each char and do a check to see if char is in obj already
+    for(const c of str){
+    //if it is, +1 -- if this val is inside of obj,
+    if(countObj[c]){
+        countObj[c]++
+    }else{ //if it isn't, add val of 1
+        countObj[c] = 1
+    }}
+    //return obj
+    return countObj
+}
+console.log(occurringChars('aba'), {'a': 2, 'b': 1})
+console.log(occurringChars('abba'), {'a': 2, 'b': 2})
+console.log(occurringChars(''), {})
+//I did not get anywhere near to this soln unfortunately. Apparently it's the beginning of hashmaps.
 
 
 
