@@ -26,3 +26,27 @@ function fizzBuzz(num){
 
     //fucking fizz buzz not working. I felt like this made a lot of sense! I tried to print and that didn't work, so I tried console logging it instead, and that didn't work either. I inserted a for loop so that it would go through each num up to the num given, but it's not returning *anything*. 
 
+//Teacher soln:
+function fizzBuzz(num){
+    //loop 1 to num
+    for(i=1; i<=num; i++){
+//if % 2, fizz; % 3 is buzz; %2&3 fizzbuzz. Need to do the %2&3 edgecase first.
+        if(i % 6 ===0){
+            console.log('fizzbuzz')
+        }else if(i % 2 === 0){
+            console.log('fizz')
+        }else if(i % 3 === 0){
+            console.log('buzz')
+        }else{
+            console.log(i)
+        }
+    }
+}
+
+fizzBuzz(20)
+//very says to start at 1, not 0!
+
+//O(n) soln because you're iterating once thru each val.
+
+//So I almost got this. I did the for loop, but then I didn't use 'i' at all. That was a clear mistake. And then I needed to do the 2&3 edgecase first (above it's %6). But I also didn't set it equal to 0 at all. Finally, I did a bunch of elses, and you can only have one else. I needed to do 'else if'. 
+//It is clear now to me what I did wrong here. 
