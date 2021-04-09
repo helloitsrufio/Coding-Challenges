@@ -42,3 +42,11 @@
 
 console.log(appearsTwice([1,2,3,3,3,4]), true)
 console.log(appearsTwice([3,4,21]), false)
+
+//teacher soln:
+
+function containsDupes(arr){
+  //if it's less than arr.length, there were indeed duplicates
+  return new Set(arr).size < arr.length
+}
+//doesn't terminate as soon as it finds a duplicate, so suboptimal.
