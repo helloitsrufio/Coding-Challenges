@@ -50,3 +50,26 @@ function containsDupes(arr){
   return new Set(arr).size < arr.length
 }
 //doesn't terminate as soon as it finds a duplicate, so suboptimal.
+
+//teacher solution, but optimal this time.
+function containsDupes(arr){
+    let numsMap = {}
+    for(let i = 0; i < arr.length; i++){
+      //individual num
+      let num = arr[i]
+      //true if there's something in map that has val. This says, if this is ever true, I've found a duplicate, and stop here.
+      if(numsMap[num]){
+        return true
+      }else{
+        //go to numsMap object with the current val, and put it in. Let that property of whatever number it is be true
+        numsMap[num] = true
+      }
+    }
+    //if we never get to the true statement, it completes the loop and returns false. 
+    return false
+  }
+  
+  console.log(containsDupes([1,2,3,1]),'true')
+  console.log(containsDupes([1,2,3,4]),'false')
+  console.log(containsDupes([1,1,1,3,3,4,3,2,4,2]),'true')
+  //more optimal because it stops once there's a duplicate.
