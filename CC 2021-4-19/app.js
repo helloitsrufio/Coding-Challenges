@@ -38,3 +38,47 @@ console.log(high('what time are we climbing up the volcano'), 'volcano')
 console.log(high('take me to semynak'), 'semynak')
 
 //Honestly feeling very stuck and lost. I don't even know how to reattempt because I'm not sure what I'm doing in the first place, you know?
+
+
+//Looking at teacher soln:
+// In order to be able to total and compare the points, we need to do something with each part of the string. 
+// Letters: 
+//  Give each letter an altered index of 1-26 vs the standard given 0-25. 
+//      Ex: ‘abc’ is normally = indexes [0,1,2], and we want it to be ‘abc’ = indexes [1,2,3]
+//  Get the ‘points’ for each letter via their new altered index, which is off by one in the example. 
+//   Add those points together to create a sum, which is the total number of points for that word.
+//      Ex: ‘aba’ === 1,2,1 added as 1+2+1=4, the score for ‘aba’ is 4.
+// Words: 
+//  Determine the score of the word Ex: ‘aba’ = 4
+//  Compare each word’s score Ex: ‘aba’ = 4 vs ‘ba’ = 3
+// Whole string: 
+//  determine the highest scoring word within it.
+function high(str) {
+    //so they assign a var to all the letters of the alphabet together.
+    const alphabet = ' abcdefghijklmnopqrstuvwxyz'
+    //they create another var that, given word, you split it based on each letter, THEN
+    // reduce. Given an accumulator and a current Val, you add the accumulator to the alphabet var.indexOf(currentVal), and you start at 0. All this is assigned to the val of 'wordScore'.
+    //I honestly don't understand this line.
+    const wordScore = word => word.split('').reduce((a,c)=> a + alphabet.indexOf(c), 0)
+    //Set an empty string var
+    let highestWord = ''
+    //Set a min count for the highest count.
+    let highestCount = 0
+    //split the string based on spaces (separating into individual words)
+    //Then, for each word, given w, 
+    //Make a new var, scoreCheck, and set it to the val of wordScore(w)
+    str.split(' ').forEach(w=>{
+      const scoreCheck = wordScore(w)
+    //if scoreCheck val is higher than the highest count, make that word the highest word.
+      if (scoreCheck > highestCount) {
+      highestWord = w
+      //and set it equal to scoreCheck
+      highestCount = scoreCheck
+      }
+  })
+  //Then return.
+  return highestWord
+  }
+console.log(high('what time are we climbing up the volcano'));
+//...Honestly, that made 0 sense. I'm going to check another soln.
+
