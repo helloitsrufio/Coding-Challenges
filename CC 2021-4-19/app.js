@@ -82,3 +82,20 @@ function high(str) {
 console.log(high('what time are we climbing up the volcano'));
 //...Honestly, that made 0 sense. I'm going to check another soln.
 
+//Ok, looking at CodeWars
+//Given a function high with the param s,
+function high(s){
+    //define a var the val of s.split
+    //map through these split words given s and all the other elements in the array (spread operator, I believe)
+    //apparently [...s] does the same thing as s.split(''), which I REALLY don't understand.
+    //Reduce given the accumulator and current val, the acc plus current Val.
+    //To those added together, check sum using charCodeAt(0). Then you subtract 96? Is that how many codes there are? Prolly.
+    let as = s.split(' ').map(s=>[...s].reduce((a,b)=>a+b.charCodeAt(0)-96,0));
+    //Because the reduce is within a map function, we're asking it to reduce each individual element and return in our new array. 
+    //Any values within s should be copied on whatever you're calling on built within an arr structure.
+    //Return s, split again for some reason.
+    //with an accompanying array given the as var, the index of the max num in the as array.
+    return s.split(' ')[as.indexOf(Math.max(...as))];
+    //Want elements of whatever has the highest value within as?
+  }
+  //...wth is wrong with me? Why do I not understand what is happening here?
