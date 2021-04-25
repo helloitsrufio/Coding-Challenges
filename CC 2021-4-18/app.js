@@ -39,6 +39,20 @@ console.log(dup(["kelless","keenness"]), ['keles','kenes'])
 //It's interesting too, because I feel like I followed the hint pretty well...but it still isn't working.
 
 
+//Classmate:
+function dup(arr){
+    //Map thru arr 
+    arr.map(w => {
+        let newW = w.toLowerCase().split('').filter((e,i,a) => e !== a[i+1])//makes a copy of original arr so you don't have to take edge cases into account.
+        return newW.join('')}
+
+}
+
+
+//Teacher soln:
+
+
+
 
 
 
