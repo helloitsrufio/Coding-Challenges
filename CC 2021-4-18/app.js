@@ -51,8 +51,12 @@ function dup(arr){
 
 //Teacher soln:
 
-
-
+function removeDupesFromStr(arr){
+    //map -> str split (individual letters), filter out letters where letter doesn't equal prev letter. Then join back together
+    return arr.map( str => str.split('').filter((l,i,a) => l != a[i-1]).join(''))//filter is saying: find me letters that don't equal the letter that came before. Keep those acceptable letters that we put together in one string and returned map. 
+    //Map will run the amount of times equiv to amount of words. 
+}
+//mapping thru each word, and then we're going to do something to filter out dup letters. Will return word minus dup chars. 
 
 
 
