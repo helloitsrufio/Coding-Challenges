@@ -18,7 +18,7 @@
 
 //Pseudocode
 
-//Classmate's code. I interviewed.
+//Classmate's code. I interviewed. Also one classmate talked through it since they didn't have an accessible computer to show their code. That helped contribute to the confusion for me.
 
 function nameO(str) {
     return str.charAt(0).toUpperCase().concat(str.slice(1, str.length-1))
