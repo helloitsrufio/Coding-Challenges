@@ -1,5 +1,12 @@
 //TEAM CODING
 
+//Doing SORT. 
+//Sorts from lowest to highest or highest to lowest based on if it is + or -. 
+//Example:
+let nums = [1,5,4,3,2]
+console.log(nums.sort((a,b)=>{return b-a}))
+//Syntax is still a bit hard for me to grasp with the (a,b) and the +/- paired with a 'return'.
+
 //Sum all the numbers of the array except the highest and the lowest element (the value, not the index!).
 //Example:
 // [ 6, 2, 1, 8, 10 ] => 16
