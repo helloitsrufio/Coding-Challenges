@@ -36,4 +36,4 @@ newArr.join(charCodeAt(text[i])-64)
 }
 
 
-//Tbh didn't know how to do this problem at all. Needed to have newArr = ''. Got the for loop right. Needed to make 'text' uppercase and then do charCodeAt() like I was trying to, but I only needed i in there, not text[i]. Others also use split(), filter(), and map(). I need to figure out filter() and map() more. A lot of people also used regex, so that might be worth doing the next time around. 
+//Tbh didn't know how to do this problem at all. Needed to have newArr = ''. Got the for loop right. Needed to make 'text' uppercase and then do charCodeAt() like I was trying to, but I only needed i in there, not text[i]. Others also use split(), filter(), and map(). I need to figure out filter() and map() more. A lot of people also used regex, so that might be worth doing the next time around. Pretty frustrating, don't feel like I got a lot out of this one. I feel like I was doing more PREP than solving the problem.
