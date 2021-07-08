@@ -33,3 +33,5 @@
       console.log(isPalindrome('55055'))
       console.log(isPalindrome('%6116%'))
       console.log("$".toLowerCase())
+
+      //Also interesting thing I learned today: toLowerCase() doesn't return an error if numbers or special characters run through it. I feel like that is a valuable thing to know.
