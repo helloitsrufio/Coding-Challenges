@@ -8,3 +8,7 @@ function palindrome(str){
 }
 console.log(palindrome('anna'))
 console.log(palindrome('beaver'))
+
+//Leon's soln:
+const palindromeCheck = str => str.split('').reverse().join('')
+palindromeCheck('racecar')
