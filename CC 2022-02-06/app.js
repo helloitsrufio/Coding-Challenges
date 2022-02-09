@@ -5,3 +5,6 @@ function reverse(str){
 }
 
 console.log(reverse('I am a bear'))
+
+//Teacher solution
+let unoReverse = str => console.log(str.split('').reverse().join(''))
