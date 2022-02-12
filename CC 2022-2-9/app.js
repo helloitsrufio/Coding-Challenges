@@ -6,3 +6,7 @@ function arrOfNums(arr){
     }
 }
 //Didn't get it to work in the time frame that I assigned for myself.
+
+//Teacher solution
+let newArr = num => num.map(num => num**2)
+//Simple, but something I didn't think about. You can just map through num and then say for each el, square it (**2)
