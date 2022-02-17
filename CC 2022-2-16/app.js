@@ -8,3 +8,7 @@ function checkQuestion(str){
     }
 }
 //Yeah so...this does not work. It doesn't I thought maybe the RegEx would work but it didn't.
+
+//Teacher answer
+alert(str.endsWith('?'))
+//So simple. I didn't know that endsWith() was even a thing! The more you learn.
