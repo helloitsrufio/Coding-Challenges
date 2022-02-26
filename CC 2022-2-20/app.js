@@ -35,3 +35,21 @@ console.log(vowelCount(99),0)
 console.log(vowelCount(''),0)
 
 
+function getCount(str){
+    //   Make a var that counts starting at 0.
+        const count = 0
+    //  Make an arr with the vowels in it.
+        const arr = ['a','e','i','o','u']
+    //   Make a for loop that states if i = arr[i], then the previous var++
+        let modifiedArr = str.toLowerCase().split('')
+        for(char of modifiedArr){
+            if(arr.includes(char)){
+                count++
+            }
+            // if(char == arr[i]){
+            //     count++
+            // }
+        }
+        return count
+    //   Return var
+    }
