@@ -26,6 +26,26 @@ function isLockNessMonster(s) {
   }
   //not working great for me. Like at all. I think I'm using forEach wrong?
 
+
+
+  //___________attempt 2___________
+  function isLockNessMonster(s) {
+      if(s.includes('fiddy') || s.includes(3.50)){
+      return true
+    }else{
+      return false
+    }}
+    //didn't need a new variable, so got rid of that. But this isn't working either. It's passing *most* of the tests, but not all. 
+    //error is an unterminated string constant.
+
+
+    //___________attempt 3___________
+    function isLockNessMonster(s) {
+        return s.includes('fiddy') || s.includes(3.50) ? true : false
+
+        //this one works! I made it a lot simpler. Not sure why I don't need 'three fifty' as well, but it passes all the tests.
+        //What a problem.
+      
   console.log(isLockNessMonster("Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance."), false)
   console.log(isLockNessMonster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy"), true)
   console.log(isLockNessMonster("Howdy Pardner. Name's Pete Lexington. I reckon you're the kinda stiff who carries about tree fiddy?
