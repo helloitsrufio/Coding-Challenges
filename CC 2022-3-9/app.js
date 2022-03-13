@@ -34,3 +34,15 @@ function concat(num){
 console.log(concat(1234),14916)
 console.log(concat(556),252536)
 console.log(concat('x'),err)
+
+
+//-----someone on codewars' soln-----
+function squareDigits(num){
+    return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
+  }
+  //All right, let's work through this mf.
+  //First, they wrap the whole shebang in Number, making it a number. 
+  //Second, they add an empty string and number, which may make it a str? Looks like it's IMPLICIT TYPE COERCION, the process of converting value from one type to another. So adding an empty str to the num param makes it a string.
+  //Third, they split the new string.
+  //Fourth, they map through the newly split string. They say that given val, return val*val. It's a bit confusing to me how they could be mapping through this at this point because it's still an arr full of strings. And it is, because the next step is joining that all together.
+  //All in all, it doesn't make a ton of sense to me, but it does a little bit.
