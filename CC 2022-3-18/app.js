@@ -22,3 +22,14 @@ console.log(sumOfSingleNums([4,90,3,2,2]),97)
 
 //trying to figure out how to get one element vs the next in the arr. This is not giving me an err or anything. It is, however, giving me each element in the arr, just *2. Yiiiikes
 
+//----second attempt----
+function sumOfSingleNums(arr){
+    let newArr = []
+    for(i=0;i<arr.length;i++){
+        if(arr[i] !== arr[i-1]){
+            newArr = [arr[i]]
+        } 
+    }
+    return newArr.map(e=>e+e)
+}
+//Returns each element unchanged and in its own separate arr. Woof. I tried to do a for loop so we could grab each individual element and while that's working for me, that's obviously NOT working for me. I got rid of the .filter() method and I'm thinking that that was not the right choice.
