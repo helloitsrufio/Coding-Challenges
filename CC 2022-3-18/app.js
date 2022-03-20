@@ -33,3 +33,14 @@ function sumOfSingleNums(arr){
     return newArr.map(e=>e+e)
 }
 //Returns each element unchanged and in its own separate arr. Woof. I tried to do a for loop so we could grab each individual element and while that's working for me, that's obviously NOT working for me. I got rid of the .filter() method and I'm thinking that that was not the right choice.
+
+
+//----working through the answer----
+function sumOfSingleNums(arr){
+    return arr.filter(num => arr.indexOf(num) === arr.lastIndexOf(num)).reduce((a,c)=>a+c,0)
+  }
+  //Ok, so they originally used .filter(), which makes sense. Given a num, you check the index of that num within the arr. And then you say that if that num's index is the same of the last index of num, then reduce. 
+  //Not sure why I didn't remember reduce. I was trying to add all the elems together, and that's exactly what .reduce() does. 
+  //I think the reason why I didn't get this is because I didn't remember either indexOf() or lastIndexOf(). To be completely honest, I'm not sure why this works. Because wouldn't it in theory start with the first and the last number? Does .lastIndexOf() check the whole arr? 
+  //So .lastIndexOf() returns the last occurence of a substring within a string. So it's checking the whole arr for a similar number.
+  //But wouldn't this grab the repeating numbers? I feel like it would...? But it doesn't.
