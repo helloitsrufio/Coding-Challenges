@@ -23,6 +23,8 @@
 //R: Return a string that has absolutely no diacritics
 //E:
 //P: Make a function that takes in a string
+
+//---first attempt---
 function unPolished(str){
     //chop that string bb into individual character
     let vowels = ['a', 'e', 'i', 'o', 'u']
@@ -40,3 +42,13 @@ str.split('').map(e=>e == polishVowels{e} ? e = vowels[e-1] : e)
 console.log(unPolished('Jędrzej Błądziński'),"Jedrzej Bladzinski")
 console.log(unPolished('Rufio is the BAEST'),'Rufio is the BAEST')
 console.log(unPolished(''),'')
+
+//--second attempt--
+function unPolished(str){
+    //chop that string bb into individual character
+    let polishVowels = { "ą": "a", "ć": "c", "ę": "e", "ł": "l", "ń": "n", "ó": "o", "ś": "s", "ź": "z", "ż": "z", }
+    //go thru array and be like, yo are you a diacritical boi?
+return str.split('').map((e) => polishVowels[e] || e).join('')
+ 
+}
+//tbh not really sure why this works, but it's because it's an object...or something. Like it grabs the key and replaces it with the value. But I don't understand the logic of the map bit after the arrow function. 
