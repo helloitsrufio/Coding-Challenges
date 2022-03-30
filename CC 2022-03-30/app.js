@@ -16,7 +16,7 @@
     //does it fit condition? no? continue loop?
     //if yes, pop the value into the map
 
-    //------------SOLUTION #1-------------
+//------------SOLUTION #1-------------
 
 var isAnagram = function(str, tea) {
     //make two map objects
