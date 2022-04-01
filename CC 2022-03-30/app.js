@@ -62,7 +62,46 @@ const sortedStrMap = Object.keys(strMap).sort().reduce((accumulator, key) => {
     return JSON.stringify(sortedStrMap) === JSON.stringify(sortedMap)
 };
 
-
+//------------SOLUTION #2-------------
+var isAnagram = function(str, tea) {
+    //make two map objects
+    let strMap = {}
+    let map = {}
+   //first of all, we want to see if str and tea are equivalent lengths. 
+    if(str.length !== tea.length){
+        return false
+    }
+    //we want to go through each string and count how many times a letter occurs. 
+        // {'a': 1, 'n': 1....}
+    // We have this count for each letter somewhere
+    // And we compare the two counts with the accompanying letters. If they are the same, return true, else return false. 
+        //if not, return false
+        //if yes, then we start breaking the strings up.
+            // Map thru the arr of the broken up str char AND
+                //see if it is in map object via map[]
+                //if it's not, then add it
+                //if it is, then 
+    for(i=0;i<str.length;i++){
+        if(strMap[str[i]]){
+           strMap[str[i]]++
+        }else{
+            strMap[str[i]] = 1
+        }
+    }
+    for(i=0;i<tea.length;i++){
+        if(map[tea[i]]){
+           map[tea[i]]++
+        }else{
+            map[tea[i]] = 1
+        }
+    }
+    for(const letter in map){
+        if(map[letter] !== strMap[letter]){
+          return false
+        }
+      }
+    return true
+};
     
 console.log(function isAnagram('anagram', 'nagaram'),true)
 console.log(function isAnagram('rat', 'car'),false)
