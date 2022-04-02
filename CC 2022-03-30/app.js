@@ -64,30 +64,25 @@ const sortedStrMap = Object.keys(strMap).sort().reduce((accumulator, key) => {
 
 //------------SOLUTION #2-------------
 var isAnagram = function(str, tea) {
-    //make two map objects
     let strMap = {}
+    //make two map objects
     let map = {}
-   //first of all, we want to see if str and tea are equivalent lengths. 
     if(str.length !== tea.length){
+        //first of all, we want to see if str and tea are equivalent lengths. If they aren't, return false. 
         return false
     }
-    //we want to go through each string and count how many times a letter occurs. 
-        // {'a': 1, 'n': 1....}
-    // We have this count for each letter somewhere
-    // And we compare the two counts with the accompanying letters. If they are the same, return true, else return false. 
-        //if not, return false
-        //if yes, then we start breaking the strings up.
-            // Map thru the arr of the broken up str char AND
-                //see if it is in map object via map[]
-                //if it's not, then add it
-                //if it is, then 
+    
     for(i=0;i<str.length;i++){
+        //next we do a for loop (I think this is the hash map part) where we go through and we say, remember that whole strMap empty object? Well, if it has whatever element we're cycling thru right now (like n)
         if(strMap[str[i]]){
+            //then increment it by 1. This is an object, so it's key value pairs, like so: 'n': 1
            strMap[str[i]]++
         }else{
             strMap[str[i]] = 1
+            //if it isn't in strMap, then set its value to 1 and move to the next element.
         }
     }
+    
     for(i=0;i<tea.length;i++){
         if(map[tea[i]]){
            map[tea[i]]++
@@ -95,12 +90,17 @@ var isAnagram = function(str, tea) {
             map[tea[i]] = 1
         }
     }
+    //same logic as for the above
+    
     for(const letter in map){
+        //so what's up here is that we are grabbing 'letter' out of map. That literally will just cycle thru map and grab each letter on each iteration.
         if(map[letter] !== strMap[letter]){
+            //then we say, if map has that letter with that value (like 1), and strMap doesn't, return false. 
           return false
         }
       }
     return true
+    //we return true after all of this. If it were false at this point, it would have already returned false. but it hasn't! So therefore it is true.
 };
     
 console.log(function isAnagram('anagram', 'nagaram'),true)
