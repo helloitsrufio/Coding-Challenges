@@ -23,6 +23,7 @@ var isAnagram = function(str, tea) {
     let strMap = {}
     let map = {}
    //first of all, we want to see if str and tea are equivalent lengths. 
+   //If they aren't, return false, nothing else happens in this whole functions. 
     if(str.length !== tea.length){
         return false
     }
@@ -37,28 +38,47 @@ var isAnagram = function(str, tea) {
                 //if it's not, then add it
                 //if it is, then 
     for(i=0;i<str.length;i++){
+        //iterating thru the string
         if(strMap[str[i]]){
+            //if strMap object has the current element being iterated thru in it,
            strMap[str[i]]++
+           //increase its value ('n': 2 <- that's the value)
         }else{
             strMap[str[i]] = 1
+            //or else if it's not there, set the value as 1 (and basically put it in there.)
         }
     }
     for(i=0;i<tea.length;i++){
+        //same sort of thing, logic
         if(map[tea[i]]){
            map[tea[i]]++
         }else{
             map[tea[i]] = 1
         }
     }
+    //
+    //so we make a variable.
+    //Object.keys(map) gives me the keys of the map (so in 'n': 2, it would give us 'n'). 
+    //Making a copy of the object, but making sure to insert the keys in alphabetical order so we can compare the two maps.
+    //Then we've got our reduce.
+    //So the initial value is at the end, the empty obj. The empty object is an empty map. That lets us fill it with values on line 67. That will be the first loop 
+    //Next time around, the acc is the one on line 67
     const sortedMap = Object.keys(map).sort().reduce((accumulator, key) => {
+        //accumulator.set(key, map[key]). If you use set on an empty obj it will give it a new key value pair ({key: map[key]})
+        //the acc is the previous value
 	accumulator[key] = map[key];
+    //give acc a new key value pair. key will be key, and the value will be map[key]. Map[key] is the value (the num)
     return accumulator;
 }, {})
 
+//do the same thing to the other map
 const sortedStrMap = Object.keys(strMap).sort().reduce((accumulator, key) => {
 	accumulator[key] = strMap[key];
     return accumulator;
 }, {})
+
+    //all right, so now we've got two alphabetically sorted maps under new names (sortedStrMap and sortedMap). We can't just set these equal to each other because they are objects. So we stick them in JSON.stringify. This converts objects into strings and therefore 'primitives' and lets a equality thingy go down.
+    //will only return if they are the same.
     return JSON.stringify(sortedStrMap) === JSON.stringify(sortedMap)
 };
 
@@ -91,7 +111,7 @@ var isAnagram = function(str, tea) {
         }
     }
     //same logic as for the above
-    
+
     for(const letter in map){
         //so what's up here is that we are grabbing 'letter' out of map. That literally will just cycle thru map and grab each letter on each iteration.
         if(map[letter] !== strMap[letter]){
