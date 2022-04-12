@@ -9,7 +9,7 @@
 
 // P: We are given an array of integers (like this bb [1,2,3]). We are also given an integer target...amount? I think. Indices = plural of `index`. It wants the indices of two numbers in the arr that add up to the amount of `target`. Is it the first that matches the target, or all that match the target? Each input has exactly ONE soln. You may not use the same element twice. Answer can be returned in any order ([1,2] or [2,1]). Will it ever be an empty arr? Assume that it will be an arr of 1+ numbers. If not, throw an err bitch. Assume that you will return an arr of two.
 
-//R: indices in an arr. The indices are for the two nums that add up to target num. so it will look like [1,2]
+//R: indices in an arr. The indices are for the two nums that add up to target num. so it will look like [0,1]
 
 //E
 
@@ -32,19 +32,15 @@ console.log(twoSum([3,3],6),[0,1])
  * @return {number[]} return an arr of numbers (indices of the nums that add up to the target num)
  */
  var twoSum = function(nums, target) {
-    //make an empty arr
-    let result = []
     //take our arr (which is nums for some reason), and loop thru that bb
     for(let i = 0; i < nums.length; i++){
         //we want two for loops because we want to be able to grab two rando nums in the arrs, not just nums that are right next to each other. 
         for(let j = i + 1; j < nums.length; j++){
             if(nums[i] + nums[j] === target){
-                result.push(i,j)
+                return [i,j]
             }
-            
         }
     }
-    return result 
         //does nums[i] + nums[i+1] = target?
         //if yes, get them indices and put them in that empty arr
         //if not, then keep looking bb. 
