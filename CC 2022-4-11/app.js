@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/two-sum/
 
-
 // Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
 
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -14,11 +13,11 @@
 //E
 
 //twoSum(arr,target)
-console.log(twoSum([2,7,11,15],9),[0,1])
-console.log(twoSum([3,2,4],6),[1,2])
-console.log(twoSum([3,3],6),[0,1])
+console.log(twoSum([2, 7, 11, 15], 9), [0, 1]);
+console.log(twoSum([3, 2, 4], 6), [1, 2]);
+console.log(twoSum([3, 3], 6), [0, 1]);
 
-// Constraints: ----constraints limit the number of possible edge cases. 
+// Constraints: ----constraints limit the number of possible edge cases.
 
 //     2 <= nums.length <= 10^4 ---at least 2 nums, at most 10^4
 //     -10^9 <= nums[i] <= 10^9 ---all of the numbers possible in the arr are between 10^-9 and 10^9
@@ -31,20 +30,19 @@ console.log(twoSum([3,3],6),[0,1])
  * @param {number} target //this says that target is just an number
  * @return {number[]} return an arr of numbers (indices of the nums that add up to the target num)
  */
- var twoSum = function(nums, target) {
-    //take our arr (which is nums for some reason), and loop thru that bb
-    for(let i = 0; i < nums.length; i++){
-        //we want two for loops because we want to be able to grab two rando nums in the arrs, not just nums that are right next to each other. 
-        for(let j = i + 1; j < nums.length; j++){
-            if(nums[i] + nums[j] === target){
-                return [i,j]
-            }
-        }
+var twoSum = function (nums, target) {
+  //take our arr (which is nums for some reason), and loop thru that bb
+  for (let i = 0; i < nums.length; i++) {
+    //we want two for loops because we want to be able to grab two rando nums in the arrs, not just nums that are right next to each other.
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
+      }
     }
-        //does nums[i] + nums[i+1] = target?
-        //if yes, get them indices and put them in that empty arr
-        //if not, then keep looking bb. 
-        
+  }
+  //does nums[i] + nums[i+1] = target?
+  //if yes, get them indices and put them in that empty arr
+  //if not, then keep looking bb.
 };
 
 // Example 1:
@@ -63,10 +61,21 @@ console.log(twoSum([3,3],6),[0,1])
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
 
- 
-
-
-
- 
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
-
+const twoSum = (nums, target) => {
+  const hashmap = {};
+  for (let i = 0; i < nums.length; i++) {
+    const complement = target - nums[i];
+    if (complement in hashmap) {
+      return [i, hashmap[complement]];
+    }
+    //collection[key] = value
+    //this sets the value to the key, bb
+    hashmap[nums[i]] = i;
+    //hashmap.set(nums[i],i)
+    //look up bracket notation
+    //what is a lookup table = fancy name for a map
+    //obj = {fizz: "buzz"} then obj["fizz"] = "buzz"
+    // == converts the variable values to the same type before performing comparison.
+  }
+};
