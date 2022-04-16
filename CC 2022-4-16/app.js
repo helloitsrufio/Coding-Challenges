@@ -13,11 +13,5 @@ function singularNums(arr){
 }
 
 console.log(singularNums((4,5,7,5,4,8),15))
-console.log(singularNums((1,1,1),0))
-console.log(singularNums(1,2,2,4,6,6,5),10)
-
-    function greet(x){
-        return x
-    }
-
-    greet('Hello World')
+console.log(singularNums((1,1,1),0)) 
+console.log(singularNums((1,2,2,4,6,6,5),10))
