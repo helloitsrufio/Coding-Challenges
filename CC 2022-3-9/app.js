@@ -46,3 +46,13 @@ function squareDigits(num){
   //Third, they split the new string.
   //Fourth, they map through the newly split string. They say that given val, return val*val. It's a bit confusing to me how they could be mapping through this at this point because it's still an arr full of strings. And it is, because the next step is joining that all together.
   //All in all, it doesn't make a ton of sense to me, but it does a little bit.
+
+
+  //-----another codewars soln-----
+  function squareDigits(num){
+    return +num.toString().split('').map(i => i*i).join('');
+  }
+  //Ok, I think I was missing something big here. This solution tries to do largely the same thing. The map is the same as well. But remember how I was like, "Idk how they can do that, it's a string"? Well, here's what I'm thinking now. 
+  // if you have a string that's a number, and you multiply it by another number or another string number, maybe that triggers the implicit type coercion. The computer be like, "Tf this is not a number. But also...kinda is? And they want to multiply it? 'aight then, leggo."
+  //But in this one I'm not seeing where they turn it back into a number. Unless the + at the very beginning (right after 'return') makes it a number through implicit type coercion? Prolly.
+    //Upon reading the comments, apparently the + in front of num does parse the string into a number. Huh. It's a unary op? https://scotch.io/tutorials/javascript-unary-operators-simple-and-useful
