@@ -26,3 +26,13 @@ function createPhoneNumber(arr){
     return '('+arr[0]+arr[1]+arr[2]+')' +  arr[3]+arr[4]+arr[5] + '-' + arr[6]+arr[7]+arr[8]+arr[9]
 }
 //This was my first attempt. We had to do some finagling, but it worked. It's definitely not pretty, but again, it does work technically. 
+
+//SECOND SOLN
+function createPhoneNumber(arr){
+    return '(' + arr.slice(0,3).join('') + ') ' + arr.slice(3,7).join('') + '-' + arr.slice(7,9).join('')
+    //Slice returns an array, so you have to use join to make it a string
+ }
+ //arr.splice(index, 0, item); will insert item into arr at the specified index (deleting 0 items first, that is, it's just an insert).
+ //We didn't want to do splice because that modified the og array, where slice made a copy of it. 
+ 
+ 
