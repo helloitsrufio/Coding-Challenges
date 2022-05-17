@@ -35,4 +35,11 @@ function createPhoneNumber(arr){
  //arr.splice(index, 0, item); will insert item into arr at the specified index (deleting 0 items first, that is, it's just an insert).
  //We didn't want to do splice because that modified the og array, where slice made a copy of it. 
  
- 
+//THIRD SOLN
+ function createPhoneNumber(arr) {
+    const numbers = arr.join('');
+    return `(${numbers.substring(0, 3)}) ${numbers.substring(3, 6)}-${numbers.substring(6)}`;
+}
+//This worked, we just had to do arr.join('') to make it a string since substr works on strings, not arrs. String() didn't work since it added a fuck ton of commas
+//blackboardd_ says that they prefer this solution since even though a phone number is made up of numbers, those nums aren't ever added or subtracted; they're essentially a string already. So using substr on them is more semantically correct? 
+//An ideal function for formatting a phone number would recieve a string and return a string.
