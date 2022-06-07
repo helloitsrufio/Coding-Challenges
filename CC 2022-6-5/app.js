@@ -33,3 +33,17 @@ function highAndLow(str){
 console.log(highAndLow("1 2 3 4 5"),"5 1")
 console.log(highAndLow("1 2 -3 4 5"),"5 -3")
 console.log(highAndLow("1 9 3 4 -5"),"9 -5")
+
+
+
+//solution
+function highAndLow(str){
+    const newStr = str.split(' ').map(Number).sort((a, b) => a - b)
+    return `${newStr.slice(-1)} ${newStr[0]}`
+}
+//So what we do here is split it based on space. Then we map it. .map(Number) == .map (x=>Number(x)). Then we sort it in numerical order (a < b == a - b)
+//Next we make the whole damn thing a string by putting it in a template literal. #snekky We grab the last number in newStr by slicing that bb off. We indicate that it is the last number by -1, like unto length-1. Then for the first element, we literally just grab the first elem out by using the [0]th index. 
+//ACTUALLY JK LOL a < b !== a - b. a < b doesn't take negative numbers into account, so it was giving us the wrong number. a - b returns a number, not a boolean. 
+// sort is just weird in a way that it expects either negative or positive value to know how to sort. a < b returns true/false
+// sort wants 3 values (<0, 0, >0), and when you use '>' or '<' it only provides 0 or 1. So don't use it bro. You need to COMPARE the numbers, so just use '-', fool. 
+//tbh still a little confused but whatevs.
