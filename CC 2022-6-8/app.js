@@ -39,3 +39,19 @@ function countPositiveSumNegative(arr){
 console.log(countPositiveSumNegative([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]),[10, -65])
 console.log(countPositiveSumNegative([1, 7, 8, 9, -1, -12, -94 -15]),[4, -122])
 console.log(countPositiveSumNegative([]),[])
+
+//second attempt
+function countPositiveSumNegative(arr){
+    let count = 0
+    let sum
+    for(i=0;i<arr.length;i++){
+        if(arr[i] > 0){
+            count + 1
+        }else if(arr[i] < 0){
+            sum += arr[i]
+        }
+    }
+    return [count,sum]
+}
+
+//For some reason I also thought that this would end up working out. We are grabbing each element...I think? Or is that just their index #? Anyway, didn't work :/
