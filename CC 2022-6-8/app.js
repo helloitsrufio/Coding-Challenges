@@ -55,3 +55,26 @@ function countPositiveSumNegative(arr){
 }
 
 //For some reason I also thought that this would end up working out. We are grabbing each element...I think? Or is that just their index #? Anyway, didn't work :/
+
+
+//third attempt
+function countPositiveSumNegative(arr){
+    if(arr == [] || arr == null ){
+        return []
+    }else if(arr.forEach(e=>{
+        if(e ==0){
+        return [empty]
+    }})
+
+    const empty = arr => arr.length = 0
+    let positiveArr = arr.filter(element => 
+        element>0)
+    let count = positiveArr.length
+    let negativeArr = arr.filter(element=>element<0)
+    let sum = negativeArr.reduce((acc,c)=>acc+c,0)
+    
+    console.log([count,sum])
+    return [count,sum]
+
+}
+//The problem is if we have [0,0], should return [], but it DOESN'T and I DON'T KNOW HOW TO FIX IT UGH. On the bright side, this is mostly working! Brilliant. 
