@@ -59,13 +59,10 @@ function countPositiveSumNegative(arr){
 
 //third attempt
 function countPositiveSumNegative(arr){
-    if(arr == [] || arr == null ){
+    if(arr == [] || arr == null || arr.length == 0){
         return []
-    }else if(arr.forEach(e=>{
-        if(e ==0){
-        return [empty]
-    }})
-
+    }
+//so the only problem was 0, and apparently the way to address it is to do arr.length == 0. Idk why this works because isn't that the same as arr = []? Idk idk, but it works. That's the only thing we changed here.
     const empty = arr => arr.length = 0
     let positiveArr = arr.filter(element => 
         element>0)
