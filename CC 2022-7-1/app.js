@@ -1,4 +1,4 @@
-// https://www.codewars.com/kata/5264d2b162488dc400000001
+// https://www.codewars.com/kata/5264d2b162488dc400000001; 6 kyu
 
 // Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 
@@ -29,3 +29,6 @@ function spinWords(str) {
 console.log(spinWords("Hey fellow warriors"), "Hey wollef sroirraw");
 console.log(spinWords("This is a test"), "This is a test");
 console.log(spinWords("This is another test"), "This is rehtona test");
+
+//This was a fun one to do because it wasn't even really hard. I knew what to do, and that is really exciting! Also, I think I've only ever done one other 6 kyu. I expected to struggle a LOT more.
+//It was a bit tricky until I remembered to use e.length instead of e, and my map function wasn't working with my conditional until I wrapped the latter in curly brackets.
