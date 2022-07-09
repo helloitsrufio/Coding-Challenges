@@ -17,3 +17,12 @@ console.log(factorial(2),2)
 console.log(factorial(3),6)
 console.log(factorial(4),24)
 
+function factorial (n) {
+    // make an empty arr
+    let sum = 1
+  //make a for loop where we go up to whatever number n is
+  for(i=1;i<=n;i++){
+    sum *= i
+  }
+  return sum
+}
