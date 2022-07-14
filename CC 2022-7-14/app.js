@@ -38,3 +38,27 @@
 // test_03:
 
 // sumList(null); // 0
+
+//writing a function called sumList. Takes in a linked list with numbers.
+// should return the sum of a linked list (all the stuff added together)
+//i was navigating with current.next
+
+console.log(sumList(x), 42);
+console.log(sumList(z), 100);
+console.log(sumList(null), 0);
+
+//Make a function called sumList
+function sumList(head) {
+  //make an empty sum variable
+  let sum = 0;
+  //make a variable that captures the value of head (and therefore the linked list)
+  let current = head;
+  while (current != null) {
+    //Grab the current value and add it to sum
+    sum += current.val;
+    //Change the current variable to be variable.next
+    current = current.next;
+    //return sum?
+  }
+  return sum;
+}
