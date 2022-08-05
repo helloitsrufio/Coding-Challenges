@@ -25,3 +25,6 @@ function descendingOrder(int){
 console.log(descendingOrder(42145),54421)
 console.log(descendingOrder(145263),654321)
 console.log(descendingOrder(123456789),987654321)
+
+//Kind of wild how easy this one was for me. I don't think it even took 10 minutes. It's so cool to see that I'm progressing in this way. It used to take me SO LONG to get any coding challenges done and now a ton of them are just a goddamn breeze.
+//#smallwins
