@@ -27,3 +27,10 @@ function checkForFactor (base, factor) {
   }
   //Initially we've made this in JS because that's what I know. It wasn't too hard to do; I figured we should do a ternary because I didn't realize that the first part would already return a boolean. 
   //We also tried to put in undefined, but I guess we didn't need to? Esp when we got to TS. 
+
+  //Second solution: make it TYPESCRIPT
+    export function checkForFactor (base: number, factor: number): boolean | undefined {
+    return base % factor === 0 
+  }
+  //So we see here that we specified what type the function should return. That allowed us to address any undefined input. Then we were also able to ensure the type on the base and factor (number). 
+  //Because people on stream told me that line 33 will already return a boolean, we didn't put any sort of ternary shit on it. 
