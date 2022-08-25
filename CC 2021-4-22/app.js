@@ -6,3 +6,11 @@ function firstAndLast(str){
     newStr.shift()
     return newStr.join('')
 }
+
+//second solution
+function firstAndLast(str){
+    return str
+       .split('')
+       .slice(1,-1)
+       .join('')
+  }
