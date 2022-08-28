@@ -18,7 +18,26 @@
 
 // The middle character(s) of the word represented as a string.
 
-//First, suboptimal soln that I'm actually super proud of GUYS
+//First attempt, disaster yo
+function getMiddle(s){
+    //   Split chars into individual elements of an array
+    let S = s.toString.split('')
+    let i = 0
+    if(S[i] !== undefined){
+        return getMiddle(i + 1)
+    }else {
+        return S[Math.floor(i / 2)]
+    }
+    //   Divide by 2 and give middle two elements back
+    // S[i] % 2 : 
+    //   Else give middle element back
+    //   Join together and return
+    }
+    
+
+
+
+//Second full but suboptimal soln that I'm actually super proud of GUYS
 
 //P: Given a word (wooo) (string?). Supposed to return the middle character of the word if it is odd # of character, and middle two character of word if it is even # of character
 //R:Return string of middle character(s)
@@ -45,6 +64,8 @@ function getMiddle(str){
         //Return bb
     }
 }
+//Second, prolly better soln
+
 
 console.log(getMiddle('test'),'es')
 console.log(getMiddle('A'),'A')
