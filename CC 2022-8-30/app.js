@@ -18,4 +18,34 @@
 
 // The middle character(s) of the word represented as a string.
 
+//First, suboptimal soln that I'm actually super proud of GUYS
 
+//P: Given a word (wooo) (string?). Supposed to return the middle character of the word if it is odd # of character, and middle two character of word if it is even # of character
+//R:Return string of middle character(s)
+//E:
+//P: make a function that takes in a str
+function getMiddle(str){
+    function getMiddle(str){
+        //Break the string up
+    
+        //Find out how long the string is (even or odd)
+        if(str.length % 2 === 0){
+          const newStr = []
+          const index = str.length/2
+          newStr.push(str[index-1])
+          newStr.push(str[index])
+          return newStr.join('')
+        }else{
+            const index = Math.floor(str.length/2)
+            return str[index]
+        }
+        //If it's even, use something to get the middle two letters of the string
+        //join those two middle letters tgother 
+        //If it's odd, use something to get the middle letter of the string
+        //Return bb
+    }
+}
+
+console.log(getMiddle('test'),'es')
+console.log(getMiddle('A'),'A')
+console.log(getMiddle('testing'),'t')
