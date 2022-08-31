@@ -64,7 +64,12 @@ function getMiddle(str){
         //Return bb
     }
 }
-//Second, prolly better soln
+//Third, prolly better soln
+function getMiddle(s){
+    return (s.length % 2) ? s[Math.floor(s.length / 2)] : s[s.length / 2 - 1] + s[s.length / 2];
+}
+
+//Fourth soln
 
 
 console.log(getMiddle('test'),'es')
