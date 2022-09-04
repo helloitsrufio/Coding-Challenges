@@ -33,3 +33,15 @@ function stringy(size) {
   }
 
   //Didn't work out for me, got overly complicated.
+
+//------- Second attempt and soln -------
+  function stringy (str){
+    let newString = []
+    for(let i = 0; i<str; i++){
+      if(i % 2 === 0){
+        newString.push('1')
+      }else{
+        newString.push('0')
+      } }
+  return newString.join('')}
+  //Did this one with Wayne on our daily Codewars together. I did cheat a little, but this is what they wrote and I modified it a bit, so I think it counts.
