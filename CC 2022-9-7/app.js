@@ -5,6 +5,7 @@
 // Result -> TRUE if any element occurs 2x or more. False otherwise.
 //@ts-check
 
+//FIRST SOLUTION
 console.log(containsDuplicate([1, 2, 3, 1]), true);
 console.log(containsDuplicate([1, 2, 3, 4]), false);
 console.log(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]), true);
@@ -27,6 +28,36 @@ function containsDuplicate(nums) {
   //If yes, then return TRUE
   return false;
 }
+
+
+
+//SECOND SOLUTION
+//https://onecompiler.com/javascript/3yfuh24b5
+var containsDuplicate = function(nums) {
+    const hash = {}
+
+    for(e of nums){
+        if(hash[e]) return true
+        hash[e] = true
+    }
+    return false
+};
+
+// [1,2,3,1]
+
+// is 1 in hash{}?
+// nah
+// so say hash{1}
+// is 2 in hash{}?
+// nah...
+// ...
+// ...
+// is 1 in hash{}?
+// {1}
+// is {1} in {1}? yeaahhhh
+
+// {'1': tru, '2': tru, '3': tru, '4': tru
+
 
 // Example 1:
 
