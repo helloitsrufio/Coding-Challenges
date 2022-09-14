@@ -25,3 +25,13 @@ function sumTwoLowest(arr){
 
 //We did great, congrats us, but apparently it is better practice to copy arr first and then manipulate and then return copy. How do we do that do that tho
 
+//SECOND SOLN
+function sumTwoLowest(arr){
+    let newArr = arr.slice()
+      newArr.sort((a,b)=>a-b)
+      return newArr[0] += newArr[1]
+      //sort arr in numerical order 
+      //get arr[0] and arr[1] and sum them?
+  }
+  //This only differs through adding .slice(), which makes a copy of the arr. Apparently we don't actually want to change our og array, we just want to change a copy of it (best practices?)
+
