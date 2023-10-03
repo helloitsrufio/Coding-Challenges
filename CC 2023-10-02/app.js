@@ -10,13 +10,17 @@
 
 function isIsogram(str){
     let capitalizedStr = str.toUpperCase()
-    for(i=0;i<=capitalizedStr.length;i++){
-        if(i == i+1){
-            return false
-        }else{
-            return true
-        }
+    let setStr = Set(capitalizedStr)
+    if(capitalizedStr === setStr){
+        return true
     }
+    // for(i=0;i<=capitalizedStr.length;i++){
+    //     if(i == i+1){
+    //         return false
+    //     }else{
+    //         return true
+    //     }
+    // }
 }
 
 console.log(isIsogram('Dermatoglyphics'), true)
