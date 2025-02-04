@@ -56,3 +56,8 @@ function fizzbuzz(n: number){
  console.log(fizzbuzz(16))
 
  //Had to work with chatgpt because I forgot how loops work and was getting undefined when I wasn't using an arr. I also forgot how && worked, %, and .push(). Whoops lmao
+
+ //P: WHAT AM I TAKING IN
+ //R: WHAT AM I SPITTING OUT
+ //Examples
+ //P
