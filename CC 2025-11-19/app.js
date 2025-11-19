@@ -21,5 +21,5 @@ console.log(addBinary(0, 0), "0");
 
 function addBinary(a, b) {
   let addedSet = a + b;
-  return addedSet.toString();
+  return addedSet.toString(2);
 }
