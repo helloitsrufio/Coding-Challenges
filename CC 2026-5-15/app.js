@@ -25,17 +25,3 @@ function hero(n, d) {
   //determine how many bullets you actually have
   //if num of bullets is <= num of bullets needed, return true
 }
-
-//GO AWAY NARC CODE
-//
-//
-//
-
-// function hero(bullets, dragons){
-// if(bullets % 2 === 0 && bullets/dragons == true){
-//   return true
-// }else{
-//   return false
-// }
-// }
-// //bullets/dragons % 2 === 0
