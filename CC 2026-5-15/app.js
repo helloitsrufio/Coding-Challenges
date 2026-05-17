@@ -25,3 +25,17 @@ function hero(n, d) {
   //determine how many bullets you actually have
   //if num of bullets is <= num of bullets needed, return true
 }
+//This is Babyfio's solution from like 2024 or something. It doesn't work.
+// function hero(bullets, dragons){
+// if(bullets % 2 === 0 && bullets/dragons == true){
+//   return true
+// }else{
+//   return false
+// }
+// }
+
+//BUUUUUUUT we fixed it and made it work :)
+function hero(bullets, dragons) {
+  return bullets / dragons >= 2;
+}
+//it's a heckin one-liner wtf
